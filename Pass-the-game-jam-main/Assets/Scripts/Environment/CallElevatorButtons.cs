@@ -25,7 +25,7 @@ public class CallElevatorButtons : MonoBehaviour
         }
     }
 
-        private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (isNearButton == false && other.gameObject.tag == "Player")
         {

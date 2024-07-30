@@ -48,6 +48,9 @@ public class NPCManager : MonoBehaviour
 
     public float timeRemaining;
 
+    [SerializeField]
+    private ParticleSystem particles;
+
     public bool PlayerNear { get; private set; }
 
     public StateMachine FSM { get; private set; }
@@ -103,6 +106,7 @@ public class NPCManager : MonoBehaviour
                 _orderText = "Om Nom Nom"; // In case the player exits and reenters the talk radius
                 ShowMessage(_orderText);
                 _audioSource.PlayOneShot(_nomClip);
+                particles.Play();
             }
         }
     }
